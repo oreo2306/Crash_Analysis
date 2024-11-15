@@ -1,0 +1,8 @@
+data_paths:
+  charges: "data/charges_use.csv"
+  damages: "data/damages_use.csv"
+  endorse: "data/endorse_use.csv"
+  primary_person: "data/primary_person_use.csv"
+  restrict: "data/restrict_use.csv"
+  units: "data/units_use.csv"
+output_path: "C:/Users/riya/self_projects/BCG_CaseStudy/output/"

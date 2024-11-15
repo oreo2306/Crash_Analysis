@@ -1,0 +1,128 @@
+PS C:\Users\riya\self_projects\BCG_CaseStudy> spark-submit --conf "spark.driver.extraJavaOptions=-Djava.security.manager=allow" --conf "spark.executor.extraJavaOptions=-Djava.security.manager=allow" main/analytics.py
+24/11/15 16:20:36 INFO SparkContext: Running Spark version 3.5.3
+24/11/15 16:20:36 INFO SparkContext: OS info Windows 10, 10.0, amd64
+24/11/15 16:20:36 INFO SparkContext: Java version 23
+24/11/15 16:20:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/11/15 16:20:36 INFO ResourceUtils: ==============================================================
+24/11/15 16:20:36 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/11/15 16:20:36 INFO ResourceUtils: ==============================================================
+24/11/15 16:20:36 INFO SparkContext: Submitted application: CrashAnalysis
+24/11/15 16:20:36 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/11/15 16:20:36 INFO ResourceProfile: Limiting resource is cpu
+24/11/15 16:20:36 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/11/15 16:20:37 INFO SecurityManager: Changing view acls to: riya
+24/11/15 16:20:37 INFO SecurityManager: Changing modify acls to: riya
+24/11/15 16:20:37 INFO SecurityManager: Changing view acls groups to:
+24/11/15 16:20:37 INFO SecurityManager: Changing modify acls groups to:
+24/11/15 16:20:37 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: riya; groups with view permissions: EMPTY; users with modify permissions: riya; groups with modify permissions: EMPTY
+24/11/15 16:20:38 INFO Utils: Successfully started service 'sparkDriver' on port 60843.
+24/11/15 16:20:38 INFO SparkEnv: Registering MapOutputTracker
+24/11/15 16:20:38 INFO SparkEnv: Registering BlockManagerMaster
+24/11/15 16:20:38 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/11/15 16:20:38 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/11/15 16:20:38 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/11/15 16:20:38 INFO DiskBlockManager: Created local directory at C:\Users\riya\AppData\Local\Temp\blockmgr-91b490b4-9276-482b-9429-0f907abbbe8b
+24/11/15 16:20:38 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/11/15 16:20:38 INFO SparkEnv: Registering OutputCommitCoordinator
+24/11/15 16:20:38 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/11/15 16:20:39 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/11/15 16:20:39 INFO Executor: Starting executor ID driver on host DESKTOP-ENJ2T82
+24/11/15 16:20:39 INFO Executor: OS info Windows 10, 10.0, amd64
+24/11/15 16:20:39 INFO Executor: Java version 23
+24/11/15 16:20:39 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/11/15 16:20:39 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@4fdc0106 for default.
+24/11/15 16:20:39 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 60844.
+24/11/15 16:20:39 INFO NettyBlockTransferService: Server created on DESKTOP-ENJ2T82:60844
+24/11/15 16:20:39 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/11/15 16:20:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, DESKTOP-ENJ2T82, 60844, None)
+24/11/15 16:20:39 INFO BlockManagerMasterEndpoint: Registering block manager DESKTOP-ENJ2T82:60844 with 434.4 MiB RAM, BlockManagerId(driver, DESKTOP-ENJ2T82, 60844, None)
+24/11/15 16:20:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, DESKTOP-ENJ2T82, 60844, None)
+24/11/15 16:20:39 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, DESKTOP-ENJ2T82, 60844, None)
+24/11/15 16:20:52 WARN GarbageCollectionMetrics: To enable non-built-in garbage collector(s) List(G1 Concurrent GC), users should configure it(them) to spark.eventLog.gcMetrics.youngGenerationGarbageCollectors or spark.eventLog.gcMetrics.oldGenerationGarbageCollectors
+Analysis 1 - Crashes with more than 2 males killed: 0
+Analysis 2 - Number of two-wheelers booked for crashes: 784
+Analysis 3 - Top 5 Vehicle Makes:
++-----------+-----------+
+|VEH_MAKE_ID|crash_count|
++-----------+-----------+
+|     NISSAN|          4|
+|  CHEVROLET|          3|
+|      HONDA|          2|
+|       FORD|          2|
+|   CADILLAC|          1|
++-----------+-----------+
+
+Analysis 4 - Vehicles with valid licences involved in hit and run: 41
+Analysis 5 - State with the highest number of accidents without females involved:
++----------------+--------------+
+|VEH_LIC_STATE_ID|accident_count|
++----------------+--------------+
+|              TX|         94472|
++----------------+--------------+
+
+Analysis 6 - Top 3rd to 5th VEH_MAKE_IDs contributing to the largest number of injuries including death:
+24/11/15 16:21:21 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+24/11/15 16:21:21 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+24/11/15 16:21:21 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+24/11/15 16:21:22 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+24/11/15 16:21:22 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+24/11/15 16:21:23 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+24/11/15 16:21:23 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+24/11/15 16:21:23 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
++-----------+
+|VEH_MAKE_ID|
++-----------+
+|     TOYOTA|
+|      DODGE|
+|     NISSAN|
++-----------+
+
+Analysis 7 - Top ethnic user group of each unique body style:
++---------------------------------+-----------------+---------------+
+|VEH_BODY_STYL_ID                 |PRSN_ETHNICITY_ID|ethnicity_count|
++---------------------------------+-----------------+---------------+
+|AMBULANCE                        |WHITE            |97             |
+|BUS                              |HISPANIC         |391            |
+|FARM EQUIPMENT                   |WHITE            |63             |
+|FIRE TRUCK                       |WHITE            |112            |
+|MOTORCYCLE                       |WHITE            |848            |
+|NA                               |WHITE            |5693           |
+|NEV-NEIGHBORHOOD ELECTRIC VEHICLE|WHITE            |10             |
+|NOT REPORTED                     |HISPANIC         |2              |
+|NOT REPORTED                     |WHITE            |2              |
+|OTHER  (EXPLAIN IN NARRATIVE)    |WHITE            |459            |
+|PASSENGER CAR, 2-DOOR            |WHITE            |9877           |
+|PASSENGER CAR, 4-DOOR            |WHITE            |58312          |
+|PICKUP                           |WHITE            |38609          |
+|POLICE CAR/TRUCK                 |WHITE            |366            |
+|POLICE MOTORCYCLE                |HISPANIC         |3              |
+|SPORT UTILITY VEHICLE            |WHITE            |33902          |
+|TRUCK                            |WHITE            |4204           |
+|TRUCK TRACTOR                    |WHITE            |5815           |
+|UNKNOWN                          |WHITE            |1178           |
+|VAN                              |WHITE            |5291           |
+|YELLOW SCHOOL BUS                |WHITE            |264            |
++---------------------------------+-----------------+---------------+
+
+Analysis 8 - Top 5 Zip Codes:
++--------+-----------+
+|OWNR_ZIP|crash_count|
++--------+-----------+
+|   78521|         31|
+|   79936|         25|
+|   76010|         22|
+|   79938|         22|
+|   75052|         21|
++--------+-----------+
+
+Analysis 9 - Count of Distinct Crash IDs with no damaged property and damage level above 4: 8
+Analysis 10 - Top 5 Vehicle Makes:
++------------+-------------+
+| VEH_MAKE_ID|offense_count|
++------------+-------------+
+|        FORD|          795|
+|   CHEVROLET|          715|
+|FREIGHTLINER|          375|
+|       DODGE|          358|
+|      NISSAN|          256|
++------------+-------------+
